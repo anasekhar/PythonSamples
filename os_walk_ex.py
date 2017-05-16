@@ -4,7 +4,7 @@
 import argparse
 import os
 import os.path
-
+import sys
 
 def my_os_walk(path):
     if not os.path.exists(path):
@@ -21,10 +21,13 @@ def my_os_walk(path):
 	
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Please pase path to the program")
+    parser = argparse.ArgumentParser(description="Please provide directory <pgm> -p <dirname>")
     parser.add_argument('-p','--path',help='provide dir/file path',required=True)
     args = parser.parse_args()
     print args
+  #  argdict = vars(args)
+  #  print argdict
+  #  sys.exit(0)
     if args.path == 'None':
 	print " Please provide directory/file as a argument"
     else:

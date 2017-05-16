@@ -1,5 +1,5 @@
 """
-   sorting multiple dicts in a list
+=sorting multiple dicts in a list
 """
 
 def dict_sort(dic_list):
